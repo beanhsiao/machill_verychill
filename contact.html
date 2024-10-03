@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="大家好我們是 將人Machill！有鑑於生活中常遇到有朋友想打麻將但完全是麻將小白，
+    所以特地做了這個網站來做簡易的麻將教學，也順便教大家該如何算台數！">
+    <meta name="keywords" content="麻將介紹, Machill, 將人 Machill, 麻將直播">
+    <meta name="author" content="HSIAO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>將人 Machill 麻將介紹</title>
+    <link rel="icon" href="./img/Machill_logo.png">
+    <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <!-- <script src="./_js/bootstrap.bundle.js"></script> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script src="./js/sidebarClick.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<!-- 這裡引用了 jquery 的東西，後面的 js 內容也是 jquery 的寫法 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    // 這個 goForm() 是 form 標籤裡面 action 的東西
+    function goForm() {
+        // 宣告欄位
+        let field1 = $("[name='userName']").val();
+        let field2 = $("[name='mail']").val();
+        let field3 = $("[name='content_text']").val();
+        $.ajax({
+            // 這邊填的 url 要從 google 表單用戶要填的地方進去後按 F12 然後找到 form 裡面的 action 裡面的網址
+            url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAIfHEx_k1MtJGmNyyhkGgsr16bQNKlsVcN_dVNaT7ZBFvog/formResponse",
+            // 這裡的 entry 是 google 表單那邊的 input 框，只不過 type 是 hidden，所以用搜尋的比較快
+            data: {
+                "entry.439260811": field1,
+                "entry.535152775": field2,
+                "entry.2136180721": field3,
+            },
+            type: "POST",
+            dataType: "xml",
+            // 這裡是要檢查 http 的狀態碼 (status code)，一般是 200，但有時可能會有錯誤所以多一個0
+            statusCode: {
+                0: function () {
+                    alert("已送出！謝謝您幫助我們完善網站內容！")
+                },
+                200: function () {
+                    alert("已送出！謝謝您幫助我們完善網站內容！")
+                }
+            }
+        })
+    }
+</script>
+
+<body>
+    <div class="main_set">
+        <aside class="sidebar">
+            <div id="sidebar_arrange">
+                <a id="logo_link" href="index.html">
+                    <img id="logo" src="./img/Machill_logo.png" alt="將人 Machill logo">
+                    <br>
+                    將人 Machill
+
+                </a>
+                <ul id="sidebar_name">
+                    <li>
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            首　　頁
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                            關於將人
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="rule.html">
+                            <ion-icon name="book-outline"></ion-icon>
+                            麻將玩法
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                            聯絡我們
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- 社群媒體連結 -->
+                <ul id="sidebar_social">
+                    <li id="youtube" class="social_icon">
+                        <a href="https://www.youtube.com/@majong_machill" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="instagram" class="social_icon">
+                        <a href="https://www.instagram.com/machill_verychill" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="facebook" class="social_icon">
+                        <a href="https://www.facebook.com/profile.php?id=100093140944690" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="tiktok" class="social_icon">
+                        <a href=" https://www.tiktok.com/@majong_machill" target="_blank">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- 要做可隱藏式側邊欄用的按鈕 -->
+        <!-- <a class="btn"></a> -->
+        <div id="main_content_set">
+            <header id="header_title">
+                <button id="sidebar_bn">
+                    <ion-icon name="menu-outline" id="menu"></ion-icon>
+                </button>
+                <a href="index.html">
+                    將人 Machill 麻將介紹
+                </a>
+            </header>
+
+            <main>
+                <h6>
+                    有任何意見都歡迎聯絡我們
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </h6>
+                <!-- action 是代表這個表單要使用這個 JS function -->
+                <form action="javascript:goForm();">
+                    <div class="form_item_label">
+                        <label for="userName">如何稱呼您：</label>
+                    </div>
+                    <div class="form_item_input">
+                        <input id="userName" name="userName" type="text" maxlength="20" placeholder="至多20字元" autofocus
+                               required>
+                    </div>
+                    <div class="form_item_label">
+                        <label for="mail">您的信箱是：</label>
+                    </div>
+                    <div class="form_item_input">
+                        <input id="mail" name="mail" type="email" placeholder="請輸入信箱格式，例如：contact@example.com" required>
+                    </div>
+                    <div class="form_item_label">
+                        <label for="content_text">想對我們說什麼：</label>
+                    </div>
+                    <div class="form_item_input">
+                        <textarea id="content_text" name="content_text" maxlength=" 300" placeholder="至多300字元"
+                                  required></textarea>
+                    </div>
+                    <input type="submit" value="提交">
+                </form>
+
+            </main>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

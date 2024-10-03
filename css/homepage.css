@@ -1,0 +1,86 @@
+/* @font-face {
+    src: local("jf open 粉圓 2.0"),
+        url(./jf-openhuninn-2.0.ttf);
+    font-family: huninn;
+} */
+
+
+
+#homepage_cover {
+    margin: 0;
+    width: 100%;
+}
+
+#homepage_cover_img {
+    /* flex: 1; */
+    margin: 0;
+    width: 100%;
+    /* height: 50%; */
+    /* display: block; */
+    object-fit: contain;
+    /* position: relative; */
+}
+
+/* 先用P的，以後再用 css 試 */
+/* #slogan {
+    position: absolute;
+    top: 120%;
+    right: 37%;
+    left: auto;
+    font-size: 0.45rem;
+    color: rgb(70, 70, 70);
+} */
+
+/* 引言樣式 */
+#main_content_title {
+    font-size: 0.6rem;
+    color: rgb(50, 50, 50);
+    text-align: center;
+}
+
+/* 設定麻將優點第一、第三項的區塊樣式 */
+#advantage_1,
+#advantage_3 {
+    display: flex;
+    margin: 0;
+    /* width: 100px; */
+    /* position: absolute;
+    left: auto; */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(70, 70, 70);
+    border-top: 3px dashed rgb(130, 130, 130);
+    border-bottom: 3px dashed rgb(130, 130, 130)
+}
+
+/* 設定麻將優點第二項的區塊樣式 */
+#advantage_2 {
+    display: flex;
+    margin: 0;
+    /* width: 100px; */
+    /* position: absolute;
+        left: auto; */
+    color: rgb(70, 70, 70);
+}
+
+/* 設定圖片樣式 */
+#advantage_1 img,
+#advantage_2 img,
+#advantage_3 img {
+    /* display: inline-block; */
+    flex: 1;
+    margin: 0;
+    width: 60%;
+    object-fit: contain;
+    position: relative;
+    /* border-radius: 10px; */
+}
+
+/* 設定圖片配字的樣式 */
+#advantage_1 figcaption,
+#advantage_2 figcaption,
+#advantage_3 figcaption {
+    /* display: inline-block; */
+    flex: 1;
+    font-size: 0.5rem;
+    padding: 2%;
+}

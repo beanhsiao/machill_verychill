@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="大家好我們是 將人Machill！有鑑於生活中常遇到有朋友想打麻將但完全是麻將小白，
+    所以特地做了這個網站來做簡易的麻將教學，也順便教大家該如何算台數！">
+    <meta name="keywords" content="麻將介紹, Machill, 將人 Machill, 麻將直播">
+    <meta name="author" content="HSIAO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>將人 Machill 麻將介紹</title>
+    <link rel="icon" href="./img/Machill_logo.png">
+    <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <!-- <script src="./_js/bootstrap.bundle.js"></script> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/aboutpage.css">
+    <script src="./js/sidebarClick.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+<!-- 
+<script>
+    window.onload = () => {
+
+        // btn.onclick = function () {
+        //     btn.toggleClass('btnc');
+        //     sidebar.toggleClass('side');
+        //     console.log('done')
+        // }
+
+        // $('.btn').on('click', function () {
+        //     $('.btn').toggleClass('btnc');
+        //     $('.sidebar').toggleClass('side');
+        // })
+
+        // 我自己寫的
+        // 隱藏式側邊欄
+        let sideBarBnClick = 1
+        sidebar_bn.onclick = () => {
+            // 預設為 1 開啟，按了一下後為 0 關閉
+            const object = document
+                .querySelector('.sidebar')
+                .style
+            if (sideBarBnClick === 1) {
+                // .backgroundColor = "cyan";
+                object.transition = "0.8s";
+                object.display = "none";
+                sideBarBnClick = 0
+                console.log(sideBarBnClick)
+            }
+            else {
+                object.display = "block";
+                sideBarBnClick = 1
+                console.log(sideBarBnClick)
+            }
+        }
+
+
+        // nav 切換標籤
+        // 設四個按鈕的變數起始皆為0
+        // 當按鈕點擊時，該按鈕的變數會變為1(這行似乎可以不用)
+        // 用判別式判斷當臺灣按鈕點擊時，let taiwanClick=1，然後用DOM去顯示台麻規則，
+        // 其他三個用 display:none，然後最後一行再補上 變數=0
+        // 將這樣的程式碼以此類推寫四遍
+
+        // 設四個標籤的變數
+        const taiwanLabel = document.querySelector('#nav_label_taiwan').style
+        const americaLabel = document.querySelector('#nav_label_america').style
+        const japanLabel = document.querySelector('#nav_label_japan').style
+        const hongkongLabel = document.querySelector('#nav_label_hongkong').style
+
+        // 設四個連結的變數
+        const taiwanLink = document.querySelector('#taiwan').style
+        const americaLink = document.querySelector('#america').style
+        const japanLink = document.querySelector('#japan').style
+        const hongkongLink = document.querySelector('#hongkong').style
+
+
+        // 將每個標籤內容隱藏、改變標籤樣式的程式碼先寫成函數方便後面快速使用
+        const taiwanDisNone = () => {
+            // 隱藏
+            taiwanLink.display = "none";
+            // 改樣式
+            taiwanLabel.backgroundColor = "transparent"
+        }
+        const americaDisNone = () => {
+            // 隱藏
+            americaLink.display = "none";
+            // 改樣式
+            americaLabel.backgroundColor = "transparent"
+        }
+        const japanDisNone = () => {
+            // 隱藏
+            japanLink.display = "none";
+            // 改樣式
+            japanLabel.backgroundColor = "transparent"
+        }
+        const hongkongDisNone = () => {
+            // 隱藏
+            hongkongLink.display = "none";
+            // 改樣式
+            hongkongLabel.backgroundColor = "transparent"
+        }
+
+
+        // 讓每個標籤點擊時可以顯示，並且隱藏其他標籤的內容、改變標籤樣式
+        taiwan_link.onclick = () => {
+            // 顯示及隱藏內容
+            taiwanLink.display = "block";
+            // 改標籤樣式
+            taiwanLabel.backgroundColor = "rgba(20, 95, 81, 0.3)"
+            americaDisNone()
+            japanDisNone()
+            hongkongDisNone()
+        }
+        america_link.onclick = () => {
+            // 顯示及隱藏內容
+            americaLink.display = "block";
+            // 改標籤樣式
+            americaLabel.backgroundColor = "rgba(20,95,81,0.3)"
+            taiwanDisNone()
+            japanDisNone()
+            hongkongDisNone()
+        }
+        japan_link.onclick = () => {
+            // 顯示及隱藏內容
+            japanLink.display = "block";
+            // 改標籤樣式
+            japanLabel.backgroundColor = "rgba(20,95,81,0.3)"
+            taiwanDisNone()
+            americaDisNone()
+            hongkongDisNone()
+        }
+        hongkong_link.onclick = () => {
+            // 顯示及隱藏內容
+            hongkongLink.display = "block";
+            // 改標籤樣式
+            hongkongLabel.backgroundColor = "rgba(20,95,81,0.3)"
+            taiwanDisNone()
+            americaDisNone()
+            japanDisNone()
+        }
+    }
+</script> -->
+
+
+<body>
+    <div class="main_set">
+        <aside class="sidebar">
+            <div id="sidebar_arrange">
+                <a id="logo_link" href="index.html">
+                    <img id="logo" src="./img/Machill_logo.png" alt="將人 Machill logo">
+                    <br>
+                    將人 Machill
+
+                </a>
+                <ul id="sidebar_name">
+                    <li>
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            首　　頁
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                            關於將人
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="rule.html">
+                            <ion-icon name="book-outline"></ion-icon>
+                            麻將玩法
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                            聯絡我們
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- 社群媒體連結 -->
+                <ul id="sidebar_social">
+                    <li id="youtube" class="social_icon">
+                        <a href="https://www.youtube.com/@majong_machill" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="instagram" class="social_icon">
+                        <a href="https://www.instagram.com/machill_verychill" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="facebook" class="social_icon">
+                        <a href="https://www.facebook.com/profile.php?id=100093140944690" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="tiktok" class="social_icon">
+                        <a href=" https://www.tiktok.com/@majong_machill" target="_blank">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- 要做可隱藏式側邊欄用的按鈕 -->
+        <!-- <a class="btn"></a> -->
+        <div id="main_content_set">
+            <header id="header_title">
+                <button id="sidebar_bn">
+                    <ion-icon name="menu-outline" id="menu"></ion-icon>
+                </button>
+                <a href="index.html">
+                    將人 Machill 麻將介紹
+                </a>
+            </header>
+
+            <main>
+                <img src="./img/Machill_logo.jpg" alt="將人 Machill logo">
+
+                <p>
+                    歡迎來到這裡的各位看官！
+                    <br>
+                    將人 Machill 是一個麻將直播的油土伯
+                    <br>
+                    為了能讓更多想瞭解麻將卻不知道怎麼玩的朋友們可以有個小平台
+                    <br>
+                    所以特別架設了這個網站
+                    <br>
+                    -
+                    <br>
+                    我們 YouTube 頻道建立初衷是將有趣好玩的麻將換牌玩法分享出去
+                    <br>
+                    旨在散播歡樂散播愛😂
+                    <br>
+                    -
+                    <br>
+                    最一開始
+                    <br>
+                    麻將打久了會發現其實大牌真的很難做
+                    <br>
+                    尤其是大四喜大三元這類
+                    <br>
+                    於是某次我們在起手牌很爛時一時興起開始了換牌的玩法
+                    <br>
+                    玩了之後發現真的非常有趣
+                    <br>
+                    可以更常做大牌了
+                    <br>
+                    然後也開始多了越來越多種換牌的方式
+                    <br>
+                    後來覺得這麼好玩的東西不分享出去有些可惜
+                    <br>
+                    最後便成立了這個頻道
+                    <br>
+                    -
+                    <br>
+                    我們的換牌玩法非一般正規大家常看到的美麻
+                    <br>
+                    目前我們在玩的玩法大約有 10 種
+                    <br>
+                    每種玩法我們也都有定了換牌的規則
+                    <br>
+                    為免大家在直播時看不懂
+                    <br>
+                    我們也都會在影片說明欄中放今日玩法及規則
+                    <br>
+                    在直播開始前及中場休息時也會在畫面中公告今日的玩法及規則
+                    <br>
+                    -
+                    <br>
+                    而直播時會玩哪種玩法都是當日看大家想玩什麼決定
+                    <br>
+                    目前我們最常玩的有 奪人所好、揀菜、散財童子 這三種
+                    <br>
+                    其他的玩法我們未來也會慢慢在直播中玩
+                    <br>
+                    -
+                    <br>
+                    或許會有許多朋友覺得這玩法不正規
+                    <br>
+                    但其實我們想宣揚的理念是
+                    <br>
+                    「麻將其實也只是桌遊」
+                    <br>
+                    桌遊的意義是為了帶給人們娛樂
+                    <br>
+                    因此其實只要同桌打牌的四位一起定好規則就好
+                    <br>
+                    規矩是人定的人想的
+                    <br>
+                    在既有的規則下給它一些彈性也是不錯的選擇
+                    <br>
+                    好玩就好！
+                    <br>
+                    -
+                    <br>
+                    有時我們也會在直播時分享一些路上或網路上看到的好康或活動
+                    <br>
+                    有興趣的話歡迎訂閱我們的 YouTube 頻道喲！
+                    <br>
+                </p>
+                <a
+                   href="https://payment.ecpay.com.tw/Broadcaster/Donate/92870BCBC85C64227E4121CE94728797">
+                    <span class="sponsor_title">歡迎大家請我們喝杯珍奶🥤</span>
+                    <span class="sponsor_content">加料加到滿出來</span>
+                </a>
+            </main>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

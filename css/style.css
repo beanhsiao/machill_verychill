@@ -1,0 +1,253 @@
+/* 新版本似乎沒辦法用這個方式插入圖示庫 */
+/* @import "./ionicons-5.0.0/docs/css/ionicons.min.css"; */
+
+/* 新增自己的字型 */
+@font-face {
+    src: local("jf open 粉圓 2.0"),
+        url(./jf-openhuninn-2.0.ttf);
+    font-family: huninn;
+}
+
+
+/* 設定整個網頁的背景色及字型 */
+#html {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(195, 222, 172); */
+    background-color: rgb(255, 249, 217);
+    /* background-color: rgb(165, 165, 165); */
+    font-family: huninn, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3.2vw;
+    min-height: 100vh;
+    flex-grow: 1;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+body {
+    margin: 0px;
+    border: 0px;
+    /* 這邊用 min-height 才能確保高度至少與父元素一致 */
+    height: 100%;
+    /* 可以讓此元素根據內容擴展 */
+    /* flex-grow: 1; */
+}
+
+.main_set {
+    display: flex;
+    min-height: 100%;
+    /* width: 100%; */
+    flex-grow: 1;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+    /* 這邊排版的部分可以考慮用 bootstrap 的 row 還有 col 下去做 */
+    /* float: left; */
+    flex: 1;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    min-height: 100vh;
+    padding: 1%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.8s;
+    text-align: center;
+}
+
+/* 希望能做一個讓側邊欄內容固定，不會在滾動時也往上跑的功能 */
+#sidebar_arrange {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    flex: 1;
+    width: 16%;
+    margin-top: 2%;
+}
+
+#logo_link {
+    display: block;
+    text-align: center;
+    font-size: 0.6rem;
+    margin-bottom: 20%;
+    /* background-color: red; */
+}
+
+#logo {
+    width: 40%;
+    /* 沒有使用 position: fixed; 時的設定 */
+    /* width: 50%; */
+    padding: 10px;
+    /* 後來發現用 text-align: center; 可以讓圖片置中 */
+    /* margin-left: 10%; */
+    /* margin-right: auto; */
+}
+
+
+/* 所有連結消失底線、顏色變灰 */
+a {
+    text-decoration: none;
+    color: rgb(110, 110, 110);
+}
+
+/* 設定側邊欄連結樣式 */
+#sidebar_name li a,
+.sidebar ul li ion-icon {
+    color: rgb(110, 110, 110);
+    font-size: 0.5rem;
+    display: inline-block;
+}
+
+/* 滑鼠移動至連結時換色 */
+/* li>a:hover,
+a>ion-icon:hover {
+    color: rgb(6, 61, 16);
+    font-weight: 500;
+} */
+
+#sidebar_name {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar_name li {
+    margin: 5%;
+}
+
+
+/* 滑鼠移到每個連結頁面時顯示的樣式 */
+#sidebar_name li a:hover {
+    color: rgb(30, 30, 30);
+    background-color: rgba(220, 220, 220, 0.8);
+    padding: 7px;
+    font-size: 0.55rem;
+    border-radius: 15px;
+}
+
+#sidebar_social li ion-icon:hover {
+    color: rgb(30, 30, 30);
+    background-color: rgba(220, 220, 220, 0.8);
+    padding: 5px;
+    font-size: 0.55rem;
+    border-radius: 15px;
+}
+
+/* 原本要做可隱藏式側邊欄，之後有辦法再做 */
+/* .btn {
+    float: left;
+    font-size: 40px;
+    text-decoration: none;
+    color: gray;
+    font-family: huninn, Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    background-color: red;
+} */
+
+/* .btn::before {
+    content: '\f20d';
+}
+
+.btnc::before {
+    content: '\f12a';
+} */
+
+/* 設定側邊欄社群媒體部分整塊的樣式 */
+#sidebar_social {
+    list-style-type: none;
+    /* 感覺不是 margin 崩塌但是auto沒有效果 */
+    margin-top: 30%;
+    /* 下面這行是沒用 position: fixed; 時用的大小 */
+    /* margin-top: 50%; */
+    /* background-color: red; */
+    padding: 10px 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: fixed;
+    top: auto;
+    right: auto;
+    left: 2%;
+    bottom: 0.3%; */
+}
+
+/* 設定側邊欄社群媒體的樣式 */
+.social_icon {
+    flex: 1;
+    /* padding: 2px; */
+    /* width: 1%; */
+    margin: 5px;
+    display: block;
+    text-align: center;
+}
+
+/* 把主要內容的區塊整塊切出來 */
+#main_content_set {
+    flex: 6;
+    min-height: 100%;
+    /* position: relative; */
+    /* flex-direction: column; */
+}
+
+/* 設定標題欄樣式 */
+#header_title {
+    /* display: block; */
+    /* flex: 1; */
+    font-size: 0.8rem;
+    text-align: center;
+    /* background-color: rgb(29, 138, 118); */
+    background-color: rgb(20, 95, 81);
+    /* background-color: rgb(53, 53, 53); */
+    /* background-color: rgb(165, 139, 186); */
+    color: rgb(237, 237, 237);
+    /* margin: auto; */
+    margin-bottom: auto;
+    /* margin-bottom: 2.5%; */
+    border: 0;
+    padding: 1.5%;
+    /* padding-bottom: 10px; */
+    /* 不知道為何多個 position 文字就會沒辦法在 header 裡面 */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+/* 改標題欄文字顏色 */
+#header_title a {
+    color: rgb(237, 237, 237);
+    /* display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+/* 設定隱藏式側邊欄的按鈕樣式 */
+#sidebar_bn {
+    /* 以hedder_title 為基準 */
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+/* 設定隱藏式側邊欄的按鈕樣式 */
+#sidebar_bn ion-icon {
+    /* width: 40px; */
+    width: 1rem;
+    /* height: 40px; */
+    height: 1rem;
+    color: rgb(220, 220, 220);
+}

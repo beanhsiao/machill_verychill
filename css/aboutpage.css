@@ -1,0 +1,64 @@
+/* 設定主要內容區塊的排版 */
+#main_content_set main {
+    min-height: 100vh;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(70, 70, 70);
+    text-align: center;
+}
+
+/* 設定內容部分的 logo 樣式 */
+#main_content_set main img {
+    margin-top: 40px;
+    width: 30%;
+    border-radius: 50%;
+}
+
+/* 設定內容部分文字區塊的樣式 */
+#main_content_set main p {
+    text-align: left;
+    font-size: 0.5rem;
+    line-height: 1.5;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background-color: rgba(20, 95, 81, 0.2);
+    padding: 5%;
+    border-radius: 2vw;
+}
+
+/* 設定贊助連結的樣式 */
+#main_content_set main a {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    font-size: 0.6rem;
+    color: rgb(70, 70, 70);
+    background-color: rgba(0, 119, 255, 0.2);
+    padding: 3%;
+    border-radius: 2vw;
+    font-weight: 600;
+}
+
+/* 設定贊助連結被觸摸後的樣式 */
+#main_content_set main a:hover {
+    padding: 4%;
+    background-color: rgba(0, 119, 255, 0.4);
+}
+
+/* 設定贊助連結內標題的樣式 */
+#main_content_set main a .sponsor_title {
+    display: block
+}
+
+/* 設定贊助連結內小文字的樣式 */
+#main_content_set main a .sponsor_content {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.5rem;
+    font-weight: 300;
+}

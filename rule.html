@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="大家好我們是 將人Machill！有鑑於生活中常遇到有朋友想打麻將但完全是麻將小白，
+    所以特地做了這個網站來做簡易的麻將教學，也順便教大家該如何算台數！">
+    <meta name="keywords" content="麻將介紹, Machill, 將人 Machill, 麻將直播">
+    <meta name="author" content="HSIAO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>將人 Machill 麻將介紹</title>
+    <link rel="icon" href="./img/Machill_logo.png">
+    <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <!-- <script src="./_js/bootstrap.bundle.js"></script> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rulepage.css">
+    <!-- 這邊不知為何拆成兩個 js 檔時前面那個就會沒效果 -->
+    <script src="./js/sidebarClick.js"></script>
+    <!-- <script src="./js/nav.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<!-- 
+<script>
+    window.onload = () => {
+
+        // btn.onclick = function () {
+        //     btn.toggleClass('btnc');
+        //     sidebar.toggleClass('side');
+        //     console.log('done')
+        // }
+
+        // $('.btn').on('click', function () {
+        //     $('.btn').toggleClass('btnc');
+        //     $('.sidebar').toggleClass('side');
+        // })
+
+        // 我自己寫的
+        // 隱藏式側邊欄
+        let sideBarBnClick = 1
+        sidebar_bn.onclick = () => {
+            // 預設為 1 開啟，按了一下後為 0 關閉
+            const object = document
+                .querySelector('.sidebar')
+                .style
+            if (sideBarBnClick === 1) {
+                // .backgroundColor = "cyan";
+                object.transition = "0.8s";
+                object.display = "none";
+                sideBarBnClick = 0
+                console.log(sideBarBnClick)
+            }
+            else {
+                object.display = "block";
+                sideBarBnClick = 1
+                console.log(sideBarBnClick)
+            }
+        }
+
+
+        // nav 切換標籤
+        // 設四個按鈕的變數起始皆為0
+        // 當按鈕點擊時，該按鈕的變數會變為1(這行似乎可以不用)
+        // 用判別式判斷當臺灣按鈕點擊時，let taiwanClick=1，然後用DOM去顯示台麻規則，
+        // 其他三個用 display:none，然後最後一行再補上 變數=0
+        // 將這樣的程式碼以此類推寫四遍
+
+        // 設四個標籤的變數
+        const taiwanLabel = document.querySelector('#nav_label_taiwan').style
+        const americaLabel = document.querySelector('#nav_label_america').style
+        const japanLabel = document.querySelector('#nav_label_japan').style
+        const hongkongLabel = document.querySelector('#nav_label_hongkong').style
+
+        // 設四個連結的變數
+        const taiwanLink = document.querySelector('#taiwan').style
+        const americaLink = document.querySelector('#america').style
+        const japanLink = document.querySelector('#japan').style
+        const hongkongLink = document.querySelector('#hongkong').style
+
+
+        // 將每個標籤內容隱藏、改變標籤樣式的程式碼先寫成函數方便後面快速使用
+        const taiwanDisNone = () => {
+            // 隱藏
+            taiwanLink.display = "none";
+            // 改樣式
+            taiwanLabel.backgroundColor = "transparent"
+        }
+        const americaDisNone = () => {
+            // 隱藏
+            americaLink.display = "none";
+            // 改樣式
+            americaLabel.backgroundColor = "transparent"
+        }
+        const japanDisNone = () => {
+            // 隱藏
+            japanLink.display = "none";
+            // 改樣式
+            japanLabel.backgroundColor = "transparent"
+        }
+        const hongkongDisNone = () => {
+            // 隱藏
+            hongkongLink.display = "none";
+            // 改樣式
+            hongkongLabel.backgroundColor = "transparent"
+        }
+
+
+        // 讓每個標籤點擊時可以顯示，並且隱藏其他標籤的內容、改變標籤樣式
+        taiwan_link.onclick = () => {
+            // 顯示及隱藏內容
+            taiwanLink.display = "block";
+            // 改標籤樣式
+            taiwanLabel.backgroundColor = "rgba(20, 95, 81, 0.3)"
+            americaDisNone()
+            japanDisNone()
+            hongkongDisNone()
+        }
+        america_link.onclick = () => {
+            // 顯示及隱藏內容
+            americaLink.display = "block";
+            // 改標籤樣式
+            americaLabel.backgroundColor = "rgba(20,95,81,0.3)"
+            taiwanDisNone()
+            japanDisNone()
+            hongkongDisNone()
+        }
+        japan_link.onclick = () => {
+            // 顯示及隱藏內容
+            japanLink.display = "block";
+            // 改標籤樣式
+            japanLabel.backgroundColor = "rgba(20,95,81,0.3)"
+            taiwanDisNone()
+            americaDisNone()
+            hongkongDisNone()
+        }
+        hongkong_link.onclick = () => {
+            // 顯示及隱藏內容
+            hongkongLink.display = "block";
+            // 改標籤樣式
+            hongkongLabel.backgroundColor = "rgba(20,95,81,0.3)"
+            taiwanDisNone()
+            americaDisNone()
+            japanDisNone()
+        }
+    }
+</script> -->
+
+
+
+<body>
+    <div class="main_set">
+        <aside class="sidebar">
+            <div id="sidebar_arrange">
+                <a id="logo_link" href="index.html">
+                    <img id="logo" src="./img/Machill_logo.png" alt="將人 Machill logo">
+                    <br>
+                    將人 Machill
+                </a>
+                <ul id="sidebar_name">
+                    <li>
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            首　　頁
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                            關於將人
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="rule.html">
+                            <ion-icon name="book-outline"></ion-icon>
+                            麻將玩法
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                            聯絡我們
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- 社群媒體連結 -->
+                <ul id="sidebar_social">
+                    <li id="youtube" class="social_icon">
+                        <a href="https://www.youtube.com/@majong_machill" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="instagram" class="social_icon">
+                        <a href="https://www.instagram.com/machill_verychill" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="facebook" class="social_icon">
+                        <a href="https://www.facebook.com/profile.php?id=100093140944690" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="tiktok" class="social_icon">
+                        <a href=" https://www.tiktok.com/@majong_machill" target="_blank">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- 要做可隱藏式側邊欄用的按鈕 -->
+        <!-- <a class="btn"></a> -->
+        <div id="main_content_set">
+            <header id="header_title">
+                <button id="sidebar_bn">
+                    <ion-icon name="menu-outline" id="menu"></ion-icon>
+                </button>
+                <a href="index.html">
+                    將人 Machill 麻將介紹
+                </a>
+            </header>
+
+            <!-- 麻將玩法引言 -->
+            <p>
+                麻將作為歷史悠久的傳統遊戲在經歷許多地區的人們修改規則後衍生出了許多種玩法，最常見的便是臺灣麻將、美國麻將、日本麻將、香港麻將，以下對這四種最常見的玩法做介紹。
+            </p>
+
+
+            <!-- 可選擇標籤 -->
+            <ul id="nav_label">
+                <li id="nav_label_taiwan" class="nav_label_li">
+                    <a id="taiwan_link" href="#taiwan">臺灣麻將</a>
+                </li>
+                <li id="nav_label_america" class="nav_label_li">
+                    <a id="america_link" href="#america">美國麻將</a>
+                </li>
+                <li id="nav_label_japan" class="nav_label_li">
+                    <a id="japan_link" href="#japan">日本麻將</a>
+                </li>
+                <li id="nav_label_hongkong" class="nav_label_li">
+                    <a id="hongkong_link" href="#hongkong">香港麻將</a>
+                </li>
+            </ul>
+
+            <!-- 各標籤內容 -->
+            <div id="discrip">
+                <div id="taiwan" class="discrip_div">
+                    <h3>臺灣麻將</h3>
+                    <div>
+                        <iframe width="878" height="494"
+                                src="https://www.youtube.com/embed/FMoJCDCOrTI?list=PLvFrZczWEILHtqWnE7eZYAVG3k1PA_ZQk"
+                                title="【直播精華】230610 起手湊一色仍無法破解主播魔咒" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>
+                            現今的臺灣麻將在不同地方有不同的玩法，以下的玩法是以中華麻將競技協會提出的玩法規則為基準，往後有機會會再提出其他較常見的不同玩法。
+                        </p>
+                        <h4>基本規則</h4>
+                        <p>
+                            起始手牌為 16 張牌，當手中的 16
+                            張牌與第17張牌(這張會是自己摸起來的，或是由其他三個玩家其中一個打出的)剛好可組成五組順子或刻子(又稱坎)，再加上一對將(又稱雀頭或眼)時即為胡。
+                        </p>
+                        <dl>
+                            <dt>圈</dt>
+                            <dd>麻將一將共有四圈，分為東、南、西、北圈。每圈四個玩家皆需依逆時針的順序做完莊才可進行下一圈</dd>
+                            <dt>順子</dt>
+                            <dd>由三張連續的數字所組成，例如三萬、四萬、五萬。</dd>
+                            <dt>刻子(坎)</dt>
+                            <dd>由三張同樣的牌所組成，而字牌只能是刻子。</dd>
+                            <dt>將(雀頭、眼)</dt>
+                            <dd>由兩張同樣的牌所組成。</dd>
+                            <dt>槓</dt>
+                            <dd>由四張相同的牌所組成。</dd>
+                            <dt>花牌</dt>
+                            <dd>麻將共有八張花牌，分為 春、夏、秋、冬 及 梅、蘭、竹、菊。摸到花牌時需將花牌攤開並從牌山尾端在摸一張牌。</dd>
+
+                        </dl>
+                        <table class="taiwan_rule">
+                            <tr>
+                                <td class="taiwan_rule_td3">順子</td>
+                                <td class="taiwan_rule_td3">刻子(坎)</td>
+                                <td class="taiwan_rule_td2">將(雀頭、眼)</td>
+                                <td class="taiwan_rule_td4">槓</td>
+                            </tr>
+                            <tr>
+                                <td class="taiwan_rule_td3">
+                                    <img src="./img/majong_each/three_wan.png" alt="三萬的圖片">
+                                    <img src="./img/majong_each/four_wan.png" alt="四萬的圖片">
+                                    <img src="./img/majong_each/five_wan.png" alt="五萬的圖片">
+                                </td>
+                                <td class="taiwan_rule_td3">
+                                    <img src="./img/majong_each/white.png" alt="白板的圖片">
+                                    <img src="./img/majong_each/white.png" alt="白板的圖片">
+                                    <img src="./img/majong_each/white.png" alt="白板的圖片">
+                                </td>
+                                <td class="taiwan_rule_td2">
+                                    <img src="./img/majong_each/five_tong.png" alt="五筒的圖片">
+                                    <img src="./img/majong_each/five_tong.png" alt="五筒的圖片">
+                                </td>
+                                <td class="taiwan_rule_td4">
+                                    <img src="./img/majong_each/eight_bird.png" alt="八索的圖片">
+                                    <img src="./img/majong_each/eight_bird.png" alt="八索的圖片">
+                                    <img src="./img/majong_each/eight_bird.png" alt="八索的圖片">
+                                    <img src="./img/majong_each/eight_bird.png" alt="八索的圖片">
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="margin-bottom: 40px;">
+                            <tr>
+                                <td>花牌</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/majong_each/spring.png" alt="春花牌的圖片">
+                                    <img src="./img/majong_each/summer.png" alt="夏花牌的圖片">
+                                    <img src="./img/majong_each/autumn.png" alt="秋花牌的圖片">
+                                    <img src="./img/majong_each/winter.png" alt="冬花牌的圖片">
+                                    &nbsp;&nbsp;
+                                    <img src="./img/majong_each/mea.png" alt="梅花牌的圖片">
+                                    <img src="./img/majong_each/lan.png" alt="蘭花牌的圖片">
+                                    <img src="./img/majong_each/bamboo.png" alt="竹花牌的圖片">
+                                    <img src="./img/majong_each/joo.png" alt="菊花牌的圖片">
+                                </td>
+                            </tr>
+                        </table>
+                        <h4>用語</h4>
+                        <dl>
+                            <dt>碰</dt>
+                            <dd>假設手上有兩張牌想湊成刻子，當有其中一個玩家打出與這兩張牌相同的牌，這時即可喊碰並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。</dd>
+                            <dt>槓</dt>
+                            <dd>當其他玩家打出一張與手牌中的刻子相同的牌時即可喊槓，這時必須再從牌山的尾端摸一張牌後才可再打牌。但在臺灣玩法中只能槓對家即下家的牌，或是自己摸到第四張相同的牌時也可暗槓。
+                            </dd>
+                            <dt>吃</dt>
+                            <dd>假設手上有兩張牌想湊成順子，當您的上家(您左手邊的玩家)打出可使這兩張牌湊成順子的牌，這時即可喊吃並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。</dd>
+                            <dd>當同時有兩個玩家喊吃跟碰(或槓)時，碰(或槓)需優先。</dd>
+                        </dl>
+                        <p>當有吃、碰牌的動作時就不需再摸牌，直接從手牌裡打出一張牌。</p>
+                        <dl>
+                            <dt>聽牌</dt>
+                            <dd>假設現在手牌中只差一個順子或一個刻子或一個將，這時的牌即為聽牌。</dd>
+                            <dt>過水</dt>
+                            <dd>當需要吃、碰或聽牌時，若有一玩家打出了您想要的牌，但您並未喊吃、碰或胡牌時即算過水，這時若您想再喊吃、碰相同的牌，必須等到您再摸一張牌後才可喊吃、碰，而胡牌則必須等到您再摸一張牌後且這張牌亦非您的自摸牌時，即可再喊胡牌，若是自摸牌則必須選擇轉章或是等待再摸下一次的牌。
+                            </dd>
+                            <dd>以下舉個簡單的例子。</dd>
+                        </dl>
+                        <table>
+                            <tr>
+                                <td>這是一副已經聽一、四筒的牌</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/majong_each/one_wan.png" alt="一萬的圖片">
+                                    <img src="./img/majong_each/two_wan.png" alt="二萬的圖片">
+                                    <img src="./img/majong_each/three_wan.png" alt="三萬的圖片">
+                                    <img src="./img/majong_each/seven_bird.png" alt="七索的圖片">
+                                    <img src="./img/majong_each/eight_bird.png" alt="八索的圖片">
+                                    <img src="./img/majong_each/nine_bird.png" alt="九索的圖片">
+                                    <img src="./img/majong_each/five_tong.png" alt="五筒的圖片">
+                                    <img src="./img/majong_each/five_tong.png" alt="五筒的圖片">
+                                    <img src="./img/majong_each/five_tong.png" alt="五筒的圖片">
+                                    <img src="./img/majong_each/two_tong.png" alt="二筒的圖片">
+                                    <img src="./img/majong_each/three_tong.png" alt="三筒的圖片">
+                                    <img src="./img/majong_each/north.png" alt="北風的圖片">
+                                    <img src="./img/majong_each/north.png" alt="北風的圖片">
+                                    <img src="./img/majong_each/north.png" alt="北風的圖片">
+                                    <img src="./img/majong_each/white.png" alt="青發的圖片">
+                                    <img src="./img/majong_each/white.png" alt="青發的圖片">
+                                </td>
+                            </tr>
+                        </table>
+                        <dl>
+                            <dd>
+                                在這樣的情況下，若您的下家打一筒但您沒喊胡，這時若您的對家馬上再打一筒您就不可喊胡，必須等到上家打了牌，您也摸了並打出一張牌後才可再胡牌。
+                            </dd>
+                            <dd>
+                                若您剛好這次摸到的牌是一筒或四筒，那麼您也不能宣告自摸，只能選擇是否轉章或繼續聽一、四筒，但皆需再等到下一次摸牌後才能再胡。
+                            </dd>
+                        </dl>
+
+
+                    </div>
+                </div>
+                <div id="america" class="discrip_div">
+                    <h3>美國麻將</h3>
+                    <div>
+                        <iframe width="878" height="494" src="https://www.youtube.com/embed/SrOY40SxDVw"
+                                title="How To Play American Mahjong" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>用語</h4>
+                        <dl>
+                            <dt>面子</dt>
+                            <dd>
+                                面子是麻雀手牌組成的基本元素。在一般十三張麻雀之中，和牌之手牌由4組面子及1對雀頭形成。
+                            </dd>
+
+                            <dt>百搭牌</dt>
+                            <dd>
+                                與臺灣麻將不同，美國麻將多了 8 張百搭牌(又稱鬼牌、小丑、萬用牌)，故美麻總共有 152 張牌。
+                            </dd>
+                            <dd>
+                                百搭牌不能在交換手牌時傳給他家。 擁有3張以上時可作為單純的面子，在遊戲中被丟出的百搭牌會被認作上次出的牌。
+                            </dd>
+                        </dl>
+                        <h4>遊戲玩法</h4>
+                        <dl>
+                            <dt>查爾斯頓(換牌)</dt>
+                            <dd>
+                                查爾斯頓就是玩家之間一系列牌的交換。只有第一輪的查爾斯頓交換是必須進行的，一輪查爾斯頓由三次傳牌組成。
+                                <br>
+                                1. 將自己不要的3張手牌給下家。
+                                <br>
+                                2. 將自己不要的3張手牌給對家。
+                                <br>
+                                3. 將自己不要的3張手牌給上家。在這次傳牌中，玩家可以選擇“盲傳牌”，在接過別的玩家傳來的牌後，在不看是什麼牌的情況下就拿中一張二張或是全部三張牌再傳給其左邊的玩家。
+                            </dd>
+                            <dd>
+                                第二次的查爾斯頓需要所有玩家同意才可進行，而第三次則是面對面坐的兩個玩家協商好後即可互換。當換完後即可開始遊戲。
+                            </dd>
+                        </dl>
+                        <p>
+                            遊戲的目標是組成一整套(或"手")，包含4組3張 (3張相同的牌 (或"碰")或3張同花色序數相連的牌)和一個對子，一共14張。
+                        </p>
+                        <p>
+                            開始時每個玩家有13張牌。每輪，玩家摸起第14張，然後打出一張牌在桌子中心，字朝上。這時，其他玩家能選擇過或要那張牌湊成組(碰、吃或杠)或宣佈贏("和牌")。
+                            第一個完成一手牌（14張）的玩家贏。
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div id="japan" class="discrip_div">
+                    <h3>日本麻將</h3>
+                    <div>
+                        <iframe width="878" height="494" src="https://www.youtube.com/embed/DQ5oAU_vprE"
+                                title="【０麻將基礎也能】快速上手日本麻將 !!【星野Poteto | 日麻教學 | 雀魂教學】#日本麻將 #日麻 #雀魂" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>配牌</h4>
+                        <dl>
+                            <dt>洗牌和砌牌</dt>
+                            <dd>
+                                在每局遊戲開始時，將所有麻將牌混洗好並背面朝上碼成牌山的過程。每位玩家都要在自己面前碼牌，長度為17墩，每墩上下各一張。這些碼好的牌被稱為牌山或牌牆。如果使用的是全自動麻將桌，則機器會自動完成這一過程。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>開門</dt>
+                            <dd>
+                                將牌山碼好之後，由本局莊家擲兩枚骰子，根據擲出的數目，由莊家起逆時針數至某家，此玩家即在面前的牌山中開門。開門的位置是從牌山的右側數起，數至與骰子擲出數目相同的墩數，分開此墩與其左側的一墩牌。開牌點左側的兩墩即為莊家第一輪配入的牌。
+                            </dd>
+                        </dl>
+                        <p style="text-indent: 0; font-size: smaller;">
+                            莊家配入這兩墩共4張牌，隨後，南家取得在其左側的兩墩4張牌，並依次向下直至每人均配入兩墩4張牌。莊家再繼續順時針配入兩墩牌，然後重複上述過程，直至每人配入12張牌。</p>
+                        <p style="text-indent: 0;">莊家取得剩餘牌山中順次第一墩和第三墩的上張牌共2張，其他閒家依次各取1張。最終莊家共配牌14張，閒家配牌13張。</p>
+                        <dl>
+                            <dt>王牌</dt>
+                            <dd>
+                                在開門位置右側的7墩14張牌組成王牌。王牌並不用來摸牌，而是用來開嶺上牌和翻出加分牌指示牌。
+                            </dd>
+                            <dt>嶺上牌</dt>
+                            <dd>
+                                是王牌最靠近開門位置的兩墩4張，用來在開槓時補入手牌。由於嶺上牌僅有4張，因此一局中開槓的最大數目也被限制為4次，超過的槓一律不得開出，也有四槓流局的規定。
+                            </dd>
+                            <dt>加分牌指示牌</dt>
+                            <dd>
+                                從開門位置起在王牌中數出第三墩，翻開此墩的上張牌，此牌為加分牌指示牌，用於指示遊戲每局中的加分牌。
+                            </dd>
+                            <dt>壁牌</dt>
+                            <dd>
+                                狹義的壁牌是指牌山中除了王牌以外的其他牌。為區分王牌和壁牌，一般會將其與牌山稍稍分開一段距離。
+                            </dd>
+                        </dl>
+                        <h4>摸打</h4>
+                        <p style="text-indent: 0;">
+                            摸牌後，將任意一張牌放置在桌上的行為稱為出牌。須注意的是在日本麻將中，打出的牌須在自己面前、牌桌中央按6張一列整齊排列，以便其他玩家查看。與牌山(山)相對應，這些捨棄的牌所處的位置被稱為河。在一局中，如果從配牌開始直到流局，某位玩家所打出的牌都是么九牌，且均未被別家鳴牌過，則成立「流局滿貫」役。
+                        </p>
+                        <dl>
+                            <dt>胡牌</dt>
+                            日本麻將的胡牌要求：
+                            <dd>
+                                ◼滿足本局的翻數要求，一般是1翻，即要求胡牌牌型必須有一個以上的役。需要注意的是加分牌雖然在計算點數時算翻，但是單憑加分牌的翻數是無法胡牌的。
+                            </dd>
+                            <dd>
+                                ◼沒有處在振聽狀態，或者在振聽狀態下自摸胡牌。
+                            </dd>
+                            <dt>副露</dt>
+                            <dd>
+                                副露是指玩家利用別家打出的牌完成自己手牌的面子的行為。副露包括吃牌、碰牌和大明槓。取得別家打出的牌以完成胡牌的榮胡不是副露。進行副露的行為也被稱為鳴牌。
+                                如果沒有副露，則手牌處於門清狀態。
+                            </dd>
+                        </dl>
+                        <h4>役種</h4>
+                        <p style="text-indent: 0;">
+                            是麻將的胡牌牌型，常見的役種如下表：
+                        </p>
+                        <table>
+                            <tr>
+                                <td>飜數</td>
+                                <td>役種</td>
+                            </tr>
+                            <tr>
+                                <td>一飜</td>
+                                <td>立直、一發、門前清自摸和、平和、斷么九、一盃口、役牌、嶺上開花、槍槓、海底摸月、河底撈魚</td>
+                            </tr>
+                            <tr>
+                                <td>二飜</td>
+                                <td>三色同順、一氣通貫、混全帶么九、七對子、對對和、三暗刻、三槓子、三色同刻、混老頭、小三元、兩立直</td>
+                            </tr>
+                            <tr>
+                                <td>三飜</td>
+                                <td>混一色、純全帶么九、二盃口</td>
+                            </tr>
+                            <tr>
+                                <td>六飜</td>
+                                <td>清一色</td>
+                            </tr>
+                            <tr>
+                                <td>役滿</td>
+                                <td>國士無雙、四暗刻、大三元、小四喜、大四喜、字一色、綠一色、清老頭、九蓮寶燈、四槓子、天和、地和</td>
+                            </tr>
+                            <tr>
+                                <td>特殊役</td>
+                                <td>流局滿貫</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="hongkong" class="discrip_div">
+                    <h3>香港麻將</h3>
+                    <div>
+                        <iframe width="878" height="494" src="https://www.youtube.com/embed/CKxqvd1JXeE"
+                                title="【麻雀教學】打牌初學者必看：認識香港麻雀打法｜Beginneros" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>香港麻將相較於美國麻將及日本麻將較為與臺灣麻將相似，最不同的地方在於起始手牌為 13 張。</p>
+                        <h4>三三制</h4>
+                        <p>現代常用的規則是三三制，指混一色、對對胡以三台計算，而清一色則以七台計算</p>
+                        <dl>
+                            <dt>起胡制度</dt>
+                            <dd>
+                                起初為避免屁胡氾濫，限制胡牌時手牌起碼要有一台，不能屁胡。後因一台的胡牌牌種太容易達成，缺乏滿足感，故現在通常以三台起胡，最大以八台或十台為上限，而網路遊戲則以十三台最為常見。
+                            </dd>
+                        </dl>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

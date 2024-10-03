@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="大家好我們是 將人Machill！有鑑於生活中常遇到有朋友想打麻將但完全是麻將小白，
+    所以特地做了這個網站來做簡易的麻將教學，也順便教大家該如何算台數！">
+    <meta name="keywords" content="麻將教學, Machill, 將人 Machill, 麻將直播">
+    <meta name="author" content="HSIAO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>將人 Machill 麻將介紹</title>
+    <link rel="icon" href="./img/Machill_logo.png">
+    <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <!-- <script src="./js/bootstrap.bundle.js"></script> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <script src="./js/sidebarClick.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <div class="main_set">
+        <aside class="sidebar">
+            <!-- 希望能做側邊欄內容可以固定的功能 -->
+            <div id="sidebar_arrange">
+                <a id="logo_link" href="index.html">
+                    <img id="logo" src="./img/Machill_logo.png" alt="將人 Machill logo">
+                    <br>
+                    將人 Machill
+
+                </a>
+                <ul id="sidebar_name">
+                    <li>
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            首　　頁
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                            關於將人
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="rule.html">
+                            <ion-icon name="book-outline"></ion-icon>
+                            麻將玩法
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                            聯絡我們
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- 社群媒體連結 -->
+                <ul id="sidebar_social">
+                    <li id="youtube" class="social_icon">
+                        <a href="https://www.youtube.com/@majong_machill">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="instagram" class="social_icon">
+                        <a href="https://www.instagram.com/machill_verychill">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="facebook" class="social_icon">
+                        <a href="https://www.facebook.com/profile.php?id=100093140944690">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li id="tiktok" class="social_icon">
+                        <a href=" https://www.tiktok.com/@majong_machill">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- 要做可隱藏式側邊欄用的按鈕 -->
+        <!-- <a class="btn"></a> -->
+        <div id="main_content_set">
+            <header id="header_title">
+                <button id="sidebar_bn">
+                    <ion-icon name="menu-outline" id="menu"></ion-icon>
+                </button>
+                <a href="index.html">
+                    將人 Machill 麻將介紹
+                </a>
+            </header>
+
+            <figure id="homepage_cover">
+                <img id="homepage_cover_img" src=" ./img/Machill_cover.png" alt="將人 Machill 封面圖片">
+                <!-- 先用P的，以後再用 css 試 -->
+                <!-- <p id="slogan">
+                    麻將 亦是桌遊
+                </p> -->
+            </figure>
+            <p id="main_content_title">
+                麻將作為歷史悠久的傳統遊戲
+                <br>
+                其優點自是眾人中意才得以在桌遊界屹立不搖
+            </p>
+            <figure id="advantage_1">
+                <img src="./img/majong_advt_1-1.jpg" alt="打麻將的好處-減少科技冷漠">
+                <figcaption>
+                    <h3>減少科技冷漠：</h3>
+                    打麻將時能提升社交互動增進感情，改善現代人的科技冷漠及社恐。
+                    天天摸一圈，親朋好友和樂融融度華年！
+                </figcaption>
+            </figure>
+            <figure id="advantage_2">
+                <figcaption>
+                    <h3>活躍腦袋瓜：</h3>
+                    打麻將需要記憶力及策略思考，有助於延緩認知衰退、提升專注力。
+                    天天摸一圈，家中長輩快快樂樂到百年！
+                </figcaption>
+                <img src="./img/majong_advt_2.jpg" alt="打麻將的好處-活躍腦袋瓜">
+            </figure>
+            <figure id="advantage_3">
+                <img src="./img/majong_advt_3.jpg" alt="打麻將的好處-強化手眼協調">
+                <figcaption>
+                    <h3>強化手眼協調：</h3>
+                    打麻將過程中的手部動作可提升手眼協調能力及細微動作技能。
+                    天天摸一圈，人人眼疾手快不可言！
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $('.btn').on('click', function () {
+            $('btn').toggleClass('btnc');
+            $('.sidebar').toggleClass('side');
+        })
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
