@@ -68,7 +68,8 @@ form>input {
     font-family: huninn, Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(70, 70, 70);
     font-size: 0.5rem;
-    padding: 5% 15%;
+    padding: 4% 12%;
+    margin: 10px;
     background-color: rgba(20, 95, 81, 0.2);
     border: 2px solid rgba(20, 95, 81, 0.5);
     border-radius: 25vw;
