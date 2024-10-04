@@ -75,7 +75,7 @@ form>input {
     margin: 10px;
     background-color: rgba(20, 95, 81, 0.2);
     border: 2px solid rgba(20, 95, 81, 0.5);
-    border-radius: 0.5vw;
+    border-radius: 15vw;
     cursor: pointer;
 }
 
