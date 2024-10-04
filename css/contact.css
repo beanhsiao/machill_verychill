@@ -50,6 +50,8 @@ main form .form_item_input input {
     width: 100%;
     box-sizing: border-box;
     font-size: 0.4rem;
+    border-radius: 5vw;
+    border: 2px solid gray;
 }
 
 /* 設定想對我們說什麼的多行輸入框的排版 */
@@ -61,6 +63,7 @@ textarea {
     resize: none;
     overflow-y: auto;
     font-size: 0.4rem;
+    border-radius: 1vw;
 }
 
 /* 設定提交按鈕樣式 */
@@ -72,7 +75,7 @@ form>input {
     margin: 10px;
     background-color: rgba(20, 95, 81, 0.2);
     border: 2px solid rgba(20, 95, 81, 0.5);
-    border-radius: 25vw;
+    border-radius: 0.5vw;
     cursor: pointer;
 }
 
