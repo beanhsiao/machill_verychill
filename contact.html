@@ -22,6 +22,43 @@
 <!-- 這裡引用了 jquery 的東西，後面的 js 內容也是 jquery 的寫法 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+    // 使用 DOMContentLoaded 事件來確保 DOM 完全加載後再執行 JavaScript
+    // 並且不影響 sidebarClick.js 的 window.onload 事件
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("contactform").addEventListener("submit", function (event) {
+            // 阻止表單的默認提交行為
+            event.preventDefault();
+
+            // 驗證email輸入內容是否符合格式
+            let emailInput = document.getElementById("mail");
+            // 使用正則表達式來驗證電子郵件格式
+            // 這邊最後如果沒加 {2,0} 會變成.後面只能有一個字母，像是 .com 會變成 .c
+            // 而 + 則代表前面那串東西至少要出現一個以上的字元，不是代表字串相加
+            let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+            if (!regex.test(emailInput.value)) {
+                emailInput.setCustomValidity("請輸入符合格式的電子郵件，例如：contact@example.com");
+            } else {
+                emailInput.setCustomValidity(""); // 清除錯誤訊息
+                goForm(); // 如果格式正確，則呼叫 goForm() 函數
+            }
+        });
+
+        // 即時監聽email格式變化，若沒即時清除錯誤訊息，會變成即使輸入正確也無法提交，只能重新整理
+        document.getElementById("mail").addEventListener("input", function () {
+            let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+            if (!regex.test(this.value)) {
+                this.setCustomValidity("請輸入符合格式的電子郵件，例如：contact@example.com")
+            } else {
+                this.setCustomValidity(""); // 清除錯誤訊息
+            }
+        })
+
+
+        // submit_btn.onclick = function () {
+
+        // }
+    })
+
     // 這個 goForm() 是 form 標籤裡面 action 的東西
     function goForm() {
         // 宣告欄位
@@ -43,9 +80,11 @@
             statusCode: {
                 0: function () {
                     alert("已送出！謝謝您幫助我們完善網站內容！")
+                    window.location.assign("contact.html"); // 送出後重新載入頁面
                 },
                 200: function () {
                     alert("已送出！謝謝您幫助我們完善網站內容！")
+                    window.location.assign("contact.html"); // 送出後重新載入頁面
                 }
             }
         })
@@ -135,29 +174,29 @@
                     <ion-icon name="chatbubbles-outline"></ion-icon>
                 </h6>
                 <!-- action 是代表這個表單要使用這個 JS function -->
-                <form action="javascript:goForm();">
+                <form id="contactform" action="#">
                     <div class="form_item_label">
                         <label for="userName">如何稱呼您：</label>
                     </div>
                     <div class="form_item_input">
                         <input id="userName" name="userName" type="text" maxlength="20" placeholder="至多20字元" autofocus
-                               required>
+                            required>
                     </div>
                     <div class="form_item_label">
                         <label for="mail">您的信箱是：</label>
                     </div>
                     <div class="form_item_input">
-                        <input id="mail" name="mail" type="email" placeholder="請輸入信箱格式，例如：contact@example.com" required>
+                        <input id="mail" name="mail" type="text" placeholder="請輸入信箱格式，例如：contact@example.com" required>
                     </div>
                     <div class="form_item_label">
                         <label for="content_text">想對我們說什麼：</label>
                     </div>
                     <div class="form_item_input">
                         <textarea id="content_text" name="content_text" maxlength=" 300" placeholder="至多300字元"
-                                  required></textarea>
+                            required></textarea>
                     </div>
                     <input type="reset" value="清除">
-                    <input type="submit" value="提交">
+                    <input type="submit" value="提交" id="submit_btn">
                 </form>
 
             </main>

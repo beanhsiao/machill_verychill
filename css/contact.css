@@ -1,86 +1,172 @@
-/* 設定主要內容區域排版 */
-#main_content_set main {
-    min-height: 100vh;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    color: rgb(70, 70, 70);
-    text-align: center;
-}
+/* 平板以上的版面 */
+@media screen and (min-width:768px) {
 
-/* 設定大標題文字排版 */
-main>h6 {
-    font-size: 0.7rem;
-    margin: 40px auto;
-}
+    /* 設定主要內容區域排版 */
+    #main_content_set main {
+        min-height: 100vh;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(70, 70, 70);
+        text-align: center;
+    }
 
-/* 設定大標題文字內 icon 的大小 */
-main>h6>ion-icon {
-    font-size: 0.6rem;
+    /* 設定大標題文字排版 */
+    main>h6 {
+        font-size: 0.7rem;
+        margin: 40px auto;
+    }
 
-}
+    /* 設定大標題文字內 icon 的大小 */
+    main>h6>ion-icon {
+        font-size: 0.6rem;
 
-/* 設定表單排版樣式 */
-main form {
-    width: 50%;
-    margin: auto;
-    font-size: 0.5rem;
-    background-color: rgba(20, 95, 81, 0.2);
-    border-radius: 2vw;
-    padding: 3.5% 5%;
-}
+    }
 
-/* 設定每個項目名稱的排版 */
-main form .form_item_label {
-    margin: auto;
-    margin-bottom: 10px;
-    /* width: 70%; */
-    text-align: justify;
-}
+    /* 設定表單排版樣式 */
+    main form {
+        width: 50%;
+        margin: auto;
+        font-size: 0.5rem;
+        background-color: rgba(20, 95, 81, 0.2);
+        border-radius: 2vw;
+        padding: 3.5% 5%;
+    }
 
-/* 設定每個輸入框區塊的排版 */
-main form .form_item_input {
-    margin-bottom: 40px;
-    width: 100%;
-}
+    /* 設定每個項目名稱的排版 */
+    main form .form_item_label {
+        margin: auto;
+        margin-bottom: 10px;
+        /* width: 70%; */
+        text-align: justify;
+    }
 
-/* 設定每個輸入框的排版 */
-main form .form_item_input input {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 0.4rem;
-    border-radius: 5vw;
-    border: 2px solid gray;
-}
+    /* 設定每個輸入框區塊的排版 */
+    main form .form_item_input {
+        margin-bottom: 40px;
+        width: 100%;
+    }
 
-/* 設定想對我們說什麼的多行輸入框的排版 */
-textarea {
-    width: 100%;
-    height: 30vh;
-    padding: 10px;
-    box-sizing: border-box;
-    resize: none;
-    overflow-y: auto;
-    font-size: 0.4rem;
-    border-radius: 1vw;
-}
+    /* 設定每個輸入框的排版 */
+    main form .form_item_input input {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.4rem;
+        border-radius: 1vw;
+    }
 
-/* 設定提交按鈕樣式 */
-form>input {
-    font-family: huninn, Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(70, 70, 70);
-    font-size: 0.5rem;
-    padding: 4% 12%;
-    margin: 10px;
-    background-color: rgba(20, 95, 81, 0.2);
-    border: 2px solid rgba(20, 95, 81, 0.5);
-    border-radius: 15vw;
-    cursor: pointer;
+    /* 設定想對我們說什麼的多行輸入框的排版 */
+    textarea {
+        width: 100%;
+        height: 30vh;
+        padding: 10px;
+        box-sizing: border-box;
+        resize: none;
+        overflow-y: auto;
+        font-size: 0.4rem;
+        border-radius: 1vw;
+    }
+
+    /* 設定提交按鈕樣式 */
+    form>input {
+        font-family: huninn, Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(70, 70, 70);
+        font-size: 0.5rem;
+        padding: 4% 12%;
+        margin: 10px;
+        background-color: rgba(20, 95, 81, 0.2);
+        border: 2px solid rgba(20, 95, 81, 0.5);
+        border-radius: 25vw;
+        cursor: pointer;
+    }
 }
 
 /* 觸摸提交按紐時的樣式 */
 form>input:hover {
     background-color: rgba(255, 128, 0, 0.2);
     border: 2px solid rgba(255, 128, 0, 0.5);
+}
+
+
+/* 手機以下的版面 */
+@media screen and (max-width:768px) {
+
+    /* 設定主要內容區域排版 */
+    #main_content_set main {
+        min-height: 100vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(70, 70, 70);
+        text-align: center;
+    }
+
+    /* 設定大標題文字排版 */
+    main>h6 {
+        font-size: 0.9rem;
+        margin: 20px;
+    }
+
+    /* 設定大標題文字內 icon 的大小 */
+    main>h6>ion-icon {
+        font-size: 0.8rem;
+
+    }
+
+    /* 設定表單排版樣式 */
+    main form {
+        width: 80%;
+        margin: auto;
+        font-size: 0.8rem;
+        background-color: rgba(20, 95, 81, 0.2);
+        border-radius: 3vw;
+        padding: 4% 7%;
+    }
+
+    /* 設定每個項目名稱的排版 */
+    main form .form_item_label {
+        margin: auto;
+        margin-bottom: 10px;
+        /* width: 70%; */
+        text-align: justify;
+    }
+
+    /* 設定每個輸入框區塊的排版 */
+    main form .form_item_input {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    /* 設定每個輸入框的排版 */
+    main form .form_item_input input {
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.5rem;
+    }
+
+    /* 設定想對我們說什麼的多行輸入框的排版 */
+    textarea {
+        width: 100%;
+        height: 20vh;
+        padding: 5px;
+        box-sizing: border-box;
+        resize: none;
+        overflow-y: auto;
+        font-size: 0.5rem;
+    }
+
+    /* 設定提交按鈕樣式 */
+    form>input {
+        font-family: huninn, Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(70, 70, 70);
+        font-size: 0.8rem;
+        padding: 4% 12%;
+        margin: 5px;
+        background-color: rgba(20, 95, 81, 0.2);
+        border: 2px solid rgba(20, 95, 81, 0.5);
+        border-radius: 25vw;
+        cursor: pointer;
+    }
 }
