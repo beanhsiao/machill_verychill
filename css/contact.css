@@ -54,18 +54,23 @@
         box-sizing: border-box;
         font-size: 0.4rem;
         border-radius: 1vw;
+        /* 這邊不使用 border 反而使用 box-shadow 來繪製邊框以避免子像素渲染問題造成邊框看起來顏色不一是因為 box-shadow 本身是陰影效果，可以更柔和的呈現邊緣 */
+        border: none;
+        box-shadow: 0 0 0 1px gray;
     }
 
     /* 設定想對我們說什麼的多行輸入框的排版 */
     textarea {
-        width: 100%;
         height: 30vh;
         padding: 10px;
+        width: 100%;
         box-sizing: border-box;
         resize: none;
         overflow-y: auto;
         font-size: 0.4rem;
         border-radius: 1vw;
+        border: none;
+        box-shadow: 0 0 0 1px gray;
     }
 
     /* 設定提交按鈕樣式 */
