@@ -1,198 +1,252 @@
 /* 設定引言樣式 */
-#main_content_set p {
-    margin: 4%;
-    font-size: 0.6rem;
-    color: rgb(70, 70, 70);
-    text-align: justify;
-    /* 文字縮排 */
-    text-indent: 1.3rem;
-}
+/* 目前僅有大於 768px 的裝置的樣式，所以小於 768px 會破版 */
+@media screen and (min-width:768px) {
+    #main_content_set p {
+        margin: 4%;
+        font-size: 0.6rem;
+        color: rgb(70, 70, 70);
+        text-align: justify;
+        /* 文字縮排 */
+        text-indent: 1.3rem;
+    }
 
 
-/* 設定整個 ul 的排版並加上導覽列的底線裝飾 */
-#nav_label {
-    list-style-type: none;
-    /* 這邊只用 text-align: justify; 會無效，故要再加後面兩行 */
-    /* 但後來覺得用flex比較快，但這邊一樣先記錄起來 */
-    /* text-align: justify; */
-    /* text-justify: distribute-all-lines; */
-    /* text-align-last: justify; */
-    padding: 0;
-    font-size: 0.7rem;
-    margin: 40px 40px 0 40px;
-    border-bottom: 2px solid rgb(20, 95, 81);
-    display: flex;
-}
+    /* 設定整個 ul 的排版並加上導覽列的底線裝飾 */
+    #nav_label {
+        list-style-type: none;
+        /* 這邊只用 text-align: justify; 會無效，故要再加後面兩行 */
+        /* 但後來覺得用flex比較快，但這邊一樣先記錄起來 */
+        /* text-align: justify; */
+        /* text-justify: distribute-all-lines; */
+        /* text-align-last: justify; */
+        padding: 0;
+        font-size: 0.7rem;
+        margin: 40px 40px 0 40px;
+        border-bottom: 2px solid rgb(20, 95, 81);
+        display: flex;
+    }
 
-/* 設定每個 li 的排版，並且設置預設 border 樣式 */
-#nav_label .nav_label_li {
-    flex: 1;
-    display: inline-block;
-    text-align: center;
-    /* margin: 0 30px; */
-    padding: 15px 3%;
-    /* padding-top: 20px;
+    /* 設定每個 li 的排版，並且設置預設 border 樣式 */
+    #nav_label .nav_label_li {
+        flex: 1;
+        display: inline-block;
+        text-align: center;
+        /* margin: 0 30px; */
+        padding: 15px 3%;
+        /* padding-top: 20px;
     padding-bottom: 20px;
     padding-left: auto;
     padding-right: auto; */
-    border-radius: 15px 15px 0 0;
-}
+        border-radius: 15px 15px 0 0;
+    }
 
-/* 讓臺灣麻將標籤設置預設樣式 */
-#nav_label_taiwan {
-    background-color: rgba(20, 95, 81, 0.3);
-}
+    /* 讓臺灣麻將標籤設置預設樣式 */
+    #nav_label_taiwan {
+        background-color: rgba(20, 95, 81, 0.3);
+    }
 
-/* 將標籤欄裡面的 a 文字改顏色 */
-#nav_label .nav_label_li a {
-    /* color: rgb(237, 237, 237); */
-    color: rgb(20, 95, 81);
-}
+    /* 將標籤欄裡面的 a 文字改顏色 */
+    #nav_label .nav_label_li a {
+        /* color: rgb(237, 237, 237); */
+        color: rgb(20, 95, 81);
+    }
 
-/* 讓第一個 nav 按鈕左邊有一點間距 */
-#nav_label li:first-child {
-    margin-left: 1%;
-}
+    /* 讓第一個 nav 按鈕左邊有一點間距 */
+    #nav_label li:first-child {
+        margin-left: 1%;
+    }
 
-/* 讓最後一個 nav 按鈕右邊有一點間距 */
-#nav_label li:last-child {
-    margin-right: 1%;
-}
+    /* 讓最後一個 nav 按鈕右邊有一點間距 */
+    #nav_label li:last-child {
+        margin-right: 1%;
+    }
 
-/* 做一個導覽列的底線裝飾 */
-/* #nav_label::after {
+    /* 做一個導覽列的底線裝飾 */
+    /* #nav_label::after {
     content: '';
     border-top: 2px solid rgb(0, 95, 0);
     display: block;
 } */
 
-/* 麻將玩法說明的樣式設定、讓麻將玩法預設隱藏 */
-.discrip_div {
-    margin: 40px;
-    font-size: 0.65rem;
-    color: rgb(70, 70, 70);
-    text-align: justify;
-    /* 讓內容可以文繞圖 */
-    /* display: flow-root; */
-    display: none;
-}
+    /* 麻將玩法說明的樣式設定、讓麻將玩法預設隱藏 */
+    .discrip_div {
+        margin: 40px;
+        font-size: 0.65rem;
+        color: rgb(70, 70, 70);
+        text-align: justify;
+        /* 讓內容可以文繞圖 */
+        /* display: flow-root; */
+        display: none;
+    }
 
-/* 讓臺灣麻將的說明能預設顯示 */
-#taiwan {
-    display: block;
-}
+    /* 讓臺灣麻將的說明能預設顯示 */
+    #taiwan {
+        display: block;
+    }
 
-/* 設定除 h3 以外整個說明塊的排版 */
-#discrip .discrip_div div {
-    margin-left: 0;
-    display: flow-root;
-}
+    /* 設定除 h3 以外整個說明塊的排版 */
+    #discrip .discrip_div div {
+        margin-left: 0;
+        display: flow-root;
+    }
 
-/* 設定影片位置及大小 */
-.discrip_div div iframe {
-    float: right;
-    width: 40%;
-    /* 目前暫時先用這樣的方式讓高度可以完整顯示 */
-    height: 38vh;
-    margin: 10px 0 0 25px;
-}
+    /* 設定 p 的排版 */
+    #discrip .discrip_div div p {
+        margin-top: 0;
+        margin-left: 0;
+        text-indent: 0;
+        font-size: smaller;
+    }
 
-/* 設定 p 的排版 */
-#discrip .discrip_div div p {
-    margin-top: 0;
-    margin-left: 0;
-    text-indent: 0;
-    font-size: smaller;
-}
+    /* 設定說明塊內 h4 的排版 */
+    #discrip .discrip_div div h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 0.7rem;
+    }
 
-/* 設定說明塊內 h4 的排版 */
-#discrip .discrip_div div h4 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
+    /* 臺灣麻將基本規則表格設定 */
+    #discrip .discrip_div div .discrip_basic{
+        box-shadow: none;
+    }
+    #discrip .discrip_div div .discrip_basic tr td {
+        background-color: none;
+        border: none;
+    }
 
-/* 設定個別說明塊的排版 */
-#discrip .discrip_div div dl {
-    margin-top: 0;
-    margin-left: 20px;
-    font-size: smaller;
-}
+    #discrip .discrip_div div .discrip_basic tr td:first-child {
+        width: 70%;
+        vertical-align: top;
+        padding-top: 20px;
+        padding-left: 0;
+        font-size: 0.6rem;
+    }
 
-/* 設定個別說明塊內的說明標題的排版 */
-#discrip .discrip_div div dl dt {
-    margin-top: 20px;
-    font-weight: 600;
-}
+    /* 設定影片位置及大小 */
+    .discrip_div div iframe {
+        /* float: right; */
+        width: 100%;
+        /* 目前暫時先用這樣的方式讓高度可以完整顯示 */
+        height: 30vh;
+        /* margin: 10px 0 5px 25px; */
+    }
 
-/* 設定個別說明塊內的說明文字的排版 */
-#discrip .discrip_div div dl dd {
-    margin-top: 20px;
-}
+    /* 設定個別說明塊的排版 */
+    #discrip .discrip_div div .discrip_table {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* margin-left: 20px; */
+        font-size: smaller;
+    }
+    #discrip .discrip_div div .discrip_table tr td {
+        /* border: 2px solid rgb(20, 95, 81); */
+        box-shadow: 0 0 2px 0 rgba(20, 95, 81, 0.7);
+        border-radius: 20px;
+        padding: 20px 10px;
+    }
+    #discrip .discrip_div div .discrip_table tr td:first-child {
+        width: 10%;
+        text-align: center;
+        justify-content: center;
+        font-size: 0.6rem;
+        font-weight: 600;
+    }
+    #discrip .discrip_div div .discrip_table tr td:nth-child(2) {
+        font-size: 0.5rem;
+    }
 
-/* 役種表樣式 */
-table {
-    border-collapse: collapse;
-    font-size: smaller;
-}
+    /* 設定個別說明塊內的說明標題的排版 */
+    #discrip .discrip_div div dl dt {
+        margin-top: 20px;
+        font-weight: 600;
+    }
 
-/* 儲存格樣式 */
-table tr td {
-    border: 2px solid rgb(20, 95, 81);
-    padding: 10px;
-}
+    /* 設定個別說明塊內的說明文字的排版 */
+    #discrip .discrip_div div dl dd {
+        margin-top: 20px;
+        text-align: justify;
+    }
 
-/* 讓標題列比較明顯 */
-table tr:first-child {
-    text-align: center;
-    font-weight: 600;
-    background-color: rgba(20, 95, 81, 0.4);
-}
+    /* 役種表樣式 */
+    table {
+        /* 避免儲存格間有間隙，且這樣設才能用 border-radius */
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 0;
+        /* box-shadow: 0 0 2px 0 rgba(20, 95, 81, 0.7);
+        border-radius: 10px; */
+        font-size: smaller;
+    }
 
-/* 讓第一欄置中 */
-table tr td:first-child {
-    text-align: center;
-    width: 10%;
-}
+    /* 儲存格樣式 */
+    .rule_table tr td {
+        /* border: 2px solid rgb(20, 95, 81); */
+        box-shadow: 0 0 1px 1px rgba(20, 95, 81, 1);
+        border-radius: 15px;
+        padding: 20px 10px;
+    }
 
-/* 讓除第一列以外的基數列都可以有背景色 */
-table tr:nth-child(2n+3) {
-    background-color: rgba(20, 95, 81, 0.15);
-}
+    /* 讓標題列比較明顯 */
+    .rule_table tr:first-child td {
+        text-align: center;
+        font-weight: 600;
+        background-color: rgba(20, 95, 81, 0.4);
+        border: 0;
+        border-radius: 15px;
+        padding: 15px 10px;
+    }
 
-/* 設定臺灣玩法表格的排版 */
-.taiwan_rule {
-    width: 100%;
-    margin-bottom: 20px;
-}
+    /* 讓第一欄置中 */
+    .rule_table tr td:first-child {
+        text-align: center;
+        width: 10%;
+    }
 
+    /* 讓除第一列以外的基數列都可以有背景色 */
+    .rule_table tr:nth-child(2n+3) {
+        background-color: rgba(20, 95, 81, 0.15);
+    }
 
-/* 設定臺灣玩法表格的樣式 */
-.taiwan_rule tr {
-    display: flex;
-}
+    /* 過水示範牌組的樣式 */
+    .water_table{
+        margin-left: 40px;
+    }
 
-/* 讓順子跟刻子那欄都是切三份 */
-.taiwan_rule tr .taiwan_rule_td3 {
-    flex: 3;
-    text-align: center;
-}
-
-/* 讓眼的那欄切兩份 */
-.taiwan_rule tr .taiwan_rule_td2 {
-    flex: 2;
-    text-align: center;
-}
-
-/* 讓槓那欄切四份 */
-.taiwan_rule tr .taiwan_rule_td4 {
-    flex: 4;
-    text-align: center;
-}
+    /* 設定臺灣玩法表格的排版 */
+    .taiwan_rule {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
 
-/* 設表格內的圖片大小 */
-tr td img {
-    width: 1.2rem;
-    /* margin-left: auto;
+    /* 設定臺灣玩法表格的樣式 */
+    .taiwan_rule tr {
+        display: flex;
+    }
+
+    /* 讓順子跟刻子那欄都是切三份 */
+    .taiwan_rule tr .taiwan_rule_td3 {
+        flex: 3;
+        text-align: center;
+    }
+
+    /* 讓眼的那欄切兩份 */
+    .taiwan_rule tr .taiwan_rule_td2 {
+        flex: 2;
+        text-align: center;
+    }
+
+    /* 讓槓那欄切四份 */
+    .taiwan_rule tr .taiwan_rule_td4 {
+        flex: 4;
+        text-align: center;
+    }
+
+
+    /* 設表格內的圖片大小 */
+    .rule_table td img {
+        width: 1.2rem;
+        /* margin-left: auto;
     margin-right: auto; */
+    }
 }

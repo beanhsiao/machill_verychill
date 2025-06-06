@@ -251,35 +251,63 @@
                 <div id="taiwan" class="discrip_div">
                     <h3>臺灣麻將</h3>
                     <div>
-                        <iframe width="878" height="494"
-                                src="https://www.youtube.com/embed/FMoJCDCOrTI?list=PLvFrZczWEILHtqWnE7eZYAVG3k1PA_ZQk"
-                                title="【直播精華】230610 起手湊一色仍無法破解主播魔咒" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <p>
                             現今的臺灣麻將在不同地方有不同的玩法，以下的玩法是以中華麻將競技協會提出的玩法規則為基準，往後有機會會再提出其他較常見的不同玩法。
                         </p>
-                        <h4>基本規則</h4>
-                        <p>
-                            起始手牌為 16 張牌，當手中的 16
-                            張牌與第17張牌(這張會是自己摸起來的，或是由其他三個玩家其中一個打出的)剛好可組成五組順子或刻子(又稱坎)，再加上一對將(又稱雀頭或眼)時即為胡。
-                        </p>
-                        <dl>
-                            <dt>圈</dt>
-                            <dd>麻將一將共有四圈，分為東、南、西、北圈。每圈四個玩家皆需依逆時針的順序做完莊才可進行下一圈</dd>
-                            <dt>順子</dt>
-                            <dd>由三張連續的數字所組成，例如三萬、四萬、五萬。</dd>
-                            <dt>刻子(坎)</dt>
-                            <dd>由三張同樣的牌所組成，而字牌只能是刻子。</dd>
-                            <dt>將(雀頭、眼)</dt>
-                            <dd>由兩張同樣的牌所組成。</dd>
-                            <dt>槓</dt>
-                            <dd>由四張相同的牌所組成。</dd>
-                            <dt>花牌</dt>
-                            <dd>麻將共有八張花牌，分為 春、夏、秋、冬 及 梅、蘭、竹、菊。摸到花牌時需將花牌攤開並從牌山尾端在摸一張牌。</dd>
+                        <table class="discrip_basic">
+                            <tr>
+                                <td colspan="2">
+                                    <h4>基本規則</h4>
+                                </td>
+                                <td rowspan="2">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/FMoJCDCOrTI?list=PLvFrZczWEILHtqWnE7eZYAVG3k1PA_ZQk"
+                                        title="【直播精華】230610 起手湊一色仍無法破解主播魔咒" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        起始手牌為 16 張牌，當手中的 16
+                                        張牌與第17張牌(這張會是自己摸起來的，或是由其他三個玩家其中一個打出的)剛好可組成五組順子或刻子(又稱坎)，再加上一對將(又稱雀頭或眼)時即為胡。
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="discrip_table">
+                            <tr>
+                                <td>圈</td>
+                                <td>麻將一將共有四圈，分為東、南、西、北圈。每圈四個玩家皆需依逆時針的順序做完莊才可進行下一圈。</td>
+                            </tr>
+                            <tr>
+                                <td>順子</td>
+                                <td>由三張連續的數字所組成，例如三萬、四萬、五萬。</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    刻子
+                                </td>
+                                <td>又稱坎。由三張同樣的牌所組成，而字牌只能是刻子。</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    將
+                                </td>
+                                <td>又稱眼。由兩張同樣的牌所組成。</td>
+                            </tr>
+                            <tr>
+                                <td>槓</td>
+                                <td>由四張相同的牌所組成。</td>
+                            </tr>
+                            <tr>
+                                <td>花牌</td>
+                                <td>麻將共有八張花牌，分為 春、夏、秋、冬 及 梅、蘭、竹、菊。摸到花牌時需將花牌攤開並從牌山尾端在摸一張牌。</td>
+                            </tr>
 
-                        </dl>
-                        <table class="taiwan_rule">
+                        </table>
+                        <table class="taiwan_rule rule_table">
                             <tr>
                                 <td class="taiwan_rule_td3">順子</td>
                                 <td class="taiwan_rule_td3">刻子(坎)</td>
@@ -309,7 +337,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <table style="margin-bottom: 40px;">
+                        <table style="margin-bottom: 40px;" class="rule_table">
                             <tr>
                                 <td>花牌</td>
                             </tr>
@@ -335,19 +363,22 @@
                             <dd>當其他玩家打出一張與手牌中的刻子相同的牌時即可喊槓，這時必須再從牌山的尾端摸一張牌後才可再打牌。但在臺灣玩法中只能槓對家即下家的牌，或是自己摸到第四張相同的牌時也可暗槓。
                             </dd>
                             <dt>吃</dt>
-                            <dd>假設手上有兩張牌想湊成順子，當您的上家(您左手邊的玩家)打出可使這兩張牌湊成順子的牌，這時即可喊吃並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。</dd>
+                            <dd>假設手上有兩張牌想湊成順子，當您的上家(您左手邊的玩家)打出可使這兩張牌湊成順子的牌，這時即可喊吃並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。
+                            </dd>
                             <dd>當同時有兩個玩家喊吃跟碰(或槓)時，碰(或槓)需優先。</dd>
                         </dl>
                         <p>當有吃、碰牌的動作時就不需再摸牌，直接從手牌裡打出一張牌。</p>
                         <dl>
                             <dt>聽牌</dt>
                             <dd>假設現在手牌中只差一個順子或一個刻子或一個將，這時的牌即為聽牌。</dd>
+                            <dt>自摸</dt>
+                            <dd>在聽牌時，自己摸牌摸到可以胡的牌就稱為自摸。需注意這張牌不能碰到手牌及海底的牌，否則就算自摸無效。</dd>
                             <dt>過水</dt>
                             <dd>當需要吃、碰或聽牌時，若有一玩家打出了您想要的牌，但您並未喊吃、碰或胡牌時即算過水，這時若您想再喊吃、碰相同的牌，必須等到您再摸一張牌後才可喊吃、碰，而胡牌則必須等到您再摸一張牌後且這張牌亦非您的自摸牌時，即可再喊胡牌，若是自摸牌則必須選擇轉章或是等待再摸下一次的牌。
                             </dd>
                             <dd>以下舉個簡單的例子。</dd>
                         </dl>
-                        <table>
+                        <table class="rule_table water_table">
                             <tr>
                                 <td>這是一副已經聽一、四筒的牌</td>
                             </tr>
@@ -388,9 +419,9 @@
                     <h3>美國麻將</h3>
                     <div>
                         <iframe width="878" height="494" src="https://www.youtube.com/embed/SrOY40SxDVw"
-                                title="How To Play American Mahjong" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            title="How To Play American Mahjong" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <h4>用語</h4>
                         <dl>
                             <dt>面子</dt>
@@ -438,9 +469,9 @@
                     <h3>日本麻將</h3>
                     <div>
                         <iframe width="878" height="494" src="https://www.youtube.com/embed/DQ5oAU_vprE"
-                                title="【０麻將基礎也能】快速上手日本麻將 !!【星野Poteto | 日麻教學 | 雀魂教學】#日本麻將 #日麻 #雀魂" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            title="【０麻將基礎也能】快速上手日本麻將 !!【星野Poteto | 日麻教學 | 雀魂教學】#日本麻將 #日麻 #雀魂" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <h4>配牌</h4>
                         <dl>
                             <dt>洗牌和砌牌</dt>
@@ -534,9 +565,9 @@
                     <h3>香港麻將</h3>
                     <div>
                         <iframe width="878" height="494" src="https://www.youtube.com/embed/CKxqvd1JXeE"
-                                title="【麻雀教學】打牌初學者必看：認識香港麻雀打法｜Beginneros" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            title="【麻雀教學】打牌初學者必看：認識香港麻雀打法｜Beginneros" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <p>香港麻將相較於美國麻將及日本麻將較為與臺灣麻將相似，最不同的地方在於起始手牌為 13 張。</p>
                         <h4>三三制</h4>
                         <p>現代常用的規則是三三制，指混一色、對對胡以三台計算，而清一色則以七台計算</p>
