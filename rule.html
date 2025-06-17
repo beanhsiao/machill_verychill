@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/rulepage.css">
     <!-- 這邊不知為何拆成兩個 js 檔時前面那個就會沒效果 -->
+     <!-- 後來發現應該是因為變成有兩個window.onload的關係 -->
     <script src="./js/sidebarClick.js"></script>
     <!-- <script src="./js/nav.js"></script> -->
     <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
@@ -254,7 +255,7 @@
                         <p>
                             現今的臺灣麻將在不同地方有不同的玩法，以下的玩法是以中華麻將競技協會提出的玩法規則為基準，往後有機會會再提出其他較常見的不同玩法。
                         </p>
-                        <table class="discrip_basic">
+                        <table class="discrip_basic" id="discrip_basic_768">
                             <tr>
                                 <td colspan="2">
                                     <h4>基本規則</h4>
@@ -262,6 +263,7 @@
                                 <td rowspan="2">
                                     <iframe
                                         src="https://www.youtube.com/embed/FMoJCDCOrTI?list=PLvFrZczWEILHtqWnE7eZYAVG3k1PA_ZQk"
+                                        loading="lazy"
                                         title="【直播精華】230610 起手湊一色仍無法破解主播魔咒" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -273,6 +275,31 @@
                                         起始手牌為 16 張牌，當手中的 16
                                         張牌與第17張牌(這張會是自己摸起來的，或是由其他三個玩家其中一個打出的)剛好可組成五組順子或刻子(又稱坎)，再加上一對將(又稱雀頭或眼)時即為胡。
                                     </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="discrip_basic" id="discrip_basic_767">
+                            <tr>
+                                <td>
+                                    <h4>基本規則</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        起始手牌為 16 張牌，當手中的 16
+                                        張牌與第17張牌(這張會是自己摸起來的，或是由其他三個玩家其中一個打出的)剛好可組成五組順子或刻子(又稱坎)，再加上一對將(又稱雀頭或眼)時即為胡。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <iframe
+                                        src="https://www.youtube.com/embed/FMoJCDCOrTI?list=PLvFrZczWEILHtqWnE7eZYAVG3k1PA_ZQk"
+                                        loading="lazy"
+                                        title="【直播精華】230610 起手湊一色仍無法破解主播魔咒" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </td>
                             </tr>
                         </table>
@@ -311,7 +338,7 @@
                             <tr>
                                 <td class="taiwan_rule_td3">順子</td>
                                 <td class="taiwan_rule_td3">刻子(坎)</td>
-                                <td class="taiwan_rule_td2">將(雀頭、眼)</td>
+                                <td class="taiwan_rule_td2">將(眼)</td>
                                 <td class="taiwan_rule_td4">槓</td>
                             </tr>
                             <tr>
@@ -337,7 +364,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <table style="margin-bottom: 40px;" class="rule_table">
+                        <table class="rule_table rule_table_flower">
                             <tr>
                                 <td>花牌</td>
                             </tr>
@@ -356,27 +383,47 @@
                             </tr>
                         </table>
                         <h4>用語</h4>
+                        <table class="discrip_table" id="discrip_table_pong">
+                            <tr>
+                                <td>碰</td>
+                                <td>假設手上有兩張牌想湊成刻子，當有其中一個玩家打出與這兩張牌相同的牌，這時即可喊碰並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。</td>
+                            </tr>
+                            <tr>
+                                <td>槓</td>
+                                <td>當其他玩家打出一張與手牌中的刻子相同的牌時即可喊槓，這時必須再從牌山的尾端摸一張牌後才可再打牌。但在臺灣玩法中只能槓對家即下家的牌，或是自己摸到第四張相同的牌時也可暗槓。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>吃</td>
+                                <td>假設手上有兩張牌想湊成順子，當您的上家(您左手邊的玩家)打出可使這兩張牌湊成順子的牌，這時即可喊吃並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。
+                                </td>
+                            </tr>
+                        </table>
+                            <dl>
+                                <dd>
+                                    當同時有兩個玩家喊吃跟碰(或槓)時，碰(或槓)需優先。
+                                </dd>
+                                <dd>
+                                    當有吃、碰牌的動作時就不需再摸牌，直接從手牌裡打出一張牌。
+                                </dd>
+                            </dl>
+                        <table class="discrip_table">
+                            <tr>
+                                <td>聽牌</td>
+                                <td>假設現在手牌中只差一個順子或一個刻子或一個將，這時的牌即為聽牌。</td>
+                            </tr>
+                            <tr>
+                                <td>自摸</td>
+                                <td>在聽牌時，自己摸牌摸到可以胡的牌就稱為自摸。需注意這張牌不能碰到手牌及海底的牌，否則就算自摸無效。</td>
+                            </tr>
+                            <tr>
+                                <td>過水</td>
+                                <td>當需要吃、碰或聽牌時，若有一玩家打出了您想要的牌，但您並未喊吃、碰或胡牌時即算過水，這時若您想再喊吃、碰相同的牌，必須等到您再摸一張牌後才可喊吃、碰，而胡牌則必須等到您再摸一張牌後且這張牌亦非您的自摸牌時，即可再喊胡牌，若是自摸牌則必須選擇轉章或是等待再摸下一次的牌。
+                                </td>
+                            </tr>
+                        </table>
                         <dl>
-                            <dt>碰</dt>
-                            <dd>假設手上有兩張牌想湊成刻子，當有其中一個玩家打出與這兩張牌相同的牌，這時即可喊碰並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。</dd>
-                            <dt>槓</dt>
-                            <dd>當其他玩家打出一張與手牌中的刻子相同的牌時即可喊槓，這時必須再從牌山的尾端摸一張牌後才可再打牌。但在臺灣玩法中只能槓對家即下家的牌，或是自己摸到第四張相同的牌時也可暗槓。
-                            </dd>
-                            <dt>吃</dt>
-                            <dd>假設手上有兩張牌想湊成順子，當您的上家(您左手邊的玩家)打出可使這兩張牌湊成順子的牌，這時即可喊吃並將這張牌拿回，與原本手牌裡的兩張牌一同攤開且不能再取回或變更。
-                            </dd>
-                            <dd>當同時有兩個玩家喊吃跟碰(或槓)時，碰(或槓)需優先。</dd>
-                        </dl>
-                        <p>當有吃、碰牌的動作時就不需再摸牌，直接從手牌裡打出一張牌。</p>
-                        <dl>
-                            <dt>聽牌</dt>
-                            <dd>假設現在手牌中只差一個順子或一個刻子或一個將，這時的牌即為聽牌。</dd>
-                            <dt>自摸</dt>
-                            <dd>在聽牌時，自己摸牌摸到可以胡的牌就稱為自摸。需注意這張牌不能碰到手牌及海底的牌，否則就算自摸無效。</dd>
-                            <dt>過水</dt>
-                            <dd>當需要吃、碰或聽牌時，若有一玩家打出了您想要的牌，但您並未喊吃、碰或胡牌時即算過水，這時若您想再喊吃、碰相同的牌，必須等到您再摸一張牌後才可喊吃、碰，而胡牌則必須等到您再摸一張牌後且這張牌亦非您的自摸牌時，即可再喊胡牌，若是自摸牌則必須選擇轉章或是等待再摸下一次的牌。
-                            </dd>
-                            <dd>以下舉個簡單的例子。</dd>
+                            <dd colspan="2">以下舉個簡單的例子。</dd>
                         </dl>
                         <table class="rule_table water_table">
                             <tr>
@@ -403,6 +450,7 @@
                                 </td>
                             </tr>
                         </table>
+
                         <dl>
                             <dd>
                                 在這樣的情況下，若您的下家打一筒但您沒喊胡，這時若您的對家馬上再打一筒您就不可喊胡，必須等到上家打了牌，您也摸了並打出一張牌後才可再胡牌。
@@ -411,14 +459,13 @@
                                 若您剛好這次摸到的牌是一筒或四筒，那麼您也不能宣告自摸，只能選擇是否轉章或繼續聽一、四筒，但皆需再等到下一次摸牌後才能再胡。
                             </dd>
                         </dl>
-
-
                     </div>
                 </div>
                 <div id="america" class="discrip_div">
                     <h3>美國麻將</h3>
                     <div>
                         <iframe width="878" height="494" src="https://www.youtube.com/embed/SrOY40SxDVw"
+                        loading="lazy"
                             title="How To Play American Mahjong" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -453,13 +500,15 @@
                                 第二次的查爾斯頓需要所有玩家同意才可進行，而第三次則是面對面坐的兩個玩家協商好後即可互換。當換完後即可開始遊戲。
                             </dd>
                         </dl>
-                        <p>
-                            遊戲的目標是組成一整套(或"手")，包含4組3張 (3張相同的牌 (或"碰")或3張同花色序數相連的牌)和一個對子，一共14張。
-                        </p>
-                        <p>
-                            開始時每個玩家有13張牌。每輪，玩家摸起第14張，然後打出一張牌在桌子中心，字朝上。這時，其他玩家能選擇過或要那張牌湊成組(碰、吃或杠)或宣佈贏("和牌")。
-                            第一個完成一手牌（14張）的玩家贏。
-                        </p>
+                        <dl>
+                            <dd>
+                                遊戲的目標是組成一整套(或"手")，包含4組3張 (3張相同的牌 (或"碰")或3張同花色序數相連的牌)和一個對子，一共14張。
+                            </dd>
+                            <dd>
+                                開始時每個玩家有13張牌。每輪，玩家摸起第14張，然後打出一張牌在桌子中心，字朝上。這時，其他玩家能選擇過或要那張牌湊成組(碰、吃或杠)或宣佈贏("和牌")。
+                                第一個完成一手牌（14張）的玩家贏。
+                            </dd>
+                        </dl>
 
                     </div>
                 </div>
@@ -469,6 +518,7 @@
                     <h3>日本麻將</h3>
                     <div>
                         <iframe width="878" height="494" src="https://www.youtube.com/embed/DQ5oAU_vprE"
+                        loading="lazy"
                             title="【０麻將基礎也能】快速上手日本麻將 !!【星野Poteto | 日麻教學 | 雀魂教學】#日本麻將 #日麻 #雀魂" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -529,7 +579,7 @@
                         <p style="text-indent: 0;">
                             是麻將的胡牌牌型，常見的役種如下表：
                         </p>
-                        <table>
+                        <table class="discrip_table">
                             <tr>
                                 <td>飜數</td>
                                 <td>役種</td>
@@ -565,6 +615,7 @@
                     <h3>香港麻將</h3>
                     <div>
                         <iframe width="878" height="494" src="https://www.youtube.com/embed/CKxqvd1JXeE"
+                        loading="lazy"
                             title="【麻雀教學】打牌初學者必看：認識香港麻雀打法｜Beginneros" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
